@@ -1,25 +1,29 @@
 import React from 'react';
 
 export const ShowUrl = () => {
-  const [origin, setOrigin] = React.useState('');
-  React.useEffect(() => {
-    setOrigin(window.location.origin);
-  }, []);
-  return (
-    <pre>
-      {JSON.stringify({
-        "id": "myproxy",
-        "raw": `${origin}/api/proxy/raw/`,
-        "page": `${origin}/api/proxy/site/`,
-        "userImages": `${origin}/api/proxy/user-images/`,
-      }, null, 2)}
-    </pre>
-  );
+  const [origin, setOrigin] = React.useState('');
+  React.useEffect(() => {
+    setOrigin(window.location.origin);
+  }, []);
+  return (
+    <pre>
+      {JSON.stringify({
+        "id": "myproxy",
+        "raw": `${origin}/api/proxy/raw/`,
+        "page": `${origin}/api/proxy/site/`,
+        "userImages": `${origin}/api/proxy/user-images/`,
+      }, null, 2)}
+    </pre>
+  );
 };
 
 [//]: # (![]&#40;/images/obsidian.png&#41;)
 
-<center><img src="https://obsidian.md/images/obsidian-logo-gradient.svg" width="500em" style="margin-top: -25px;"><br><h1>Obsidian代理服务</h1></center>
+<div style={{textAlign: 'center'}}>
+  <img src="https://obsidian.md/images/obsidian-logo-gradient.svg" width="500em" style={{marginTop: '-25px'}} alt="Obsidian Logo" />
+  <br />
+  <h1>Obsidian代理服务</h1>
+</div>
 
 Obsidian是一款非常优秀的笔记软件，但是由于众所周知的原因，国内用户访问官网和插件库都会比较慢，甚至无法访问。
 
@@ -63,80 +67,91 @@ Obsidian是一款非常优秀的笔记软件，但是由于众所周知的原因
 
 [点击这里查看github帮助文件](https://github.com/gslnzfq/obsidian-proxy-server)
 <style>
-          body {
-              font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-              line-height: 1.2;
-              color: #000;
-              margin: 0;
-              padding: 30px;
-          }
-          .container {
-              max-width: 1320px;
-              margin: 0 auto;
-              padding: 20px;
-          }
-          h1 {
-              font-size: 2em;
-              margin-bottom: 0.5em;
-              color: #9d0e06;
-              font-weight: 900;
-          }
-          p {
-              margin-bottom: 1.5em;
-          }
-          pre {
-              background: #2d2d2d;
-              color: #f8f8f2;
-              padding: 30px 20px 20px;
-              border-radius: 5px;
-              overflow-x: auto;
-              position: relative;
-          }
-          pre::before {
-              content: " ";
-              display: block;
-              position: absolute;
-              top: 10px;
-              left: 10px;
-              width: 12px;
-              height: 12px;
-              background: #ff5f56;
-              border-radius: 50%;
-              box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
-          }
-          code {
-              font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-              font-size: 0.875em;
-          }
-          .copy-button {
-              position: absolute;
-              top: 10px;
-              right: 10px;
-              background: #007aff;
-              color: white;
-              border: none;
-              padding: 5px 10px;
-              border-radius: 5px;
-              cursor: pointer;
-              opacity: 0;
-              transition: opacity 0.3s;
-          }
-          pre:hover .copy-button {
-              opacity: 1;
-          }
-          .custom-button {
-              display: inline-block;
-              padding: 0 5px;
-              color: #919ca7;
-              text-align: center;
-              text-decoration: none;
-              font-size: 14px;
-              font-weight: 900;
-              cursor: pointer;
-          }
-          .custom-button:hover {
-              background-color: #7c858e;
-              color: #ffffff;
-          }        
-      </style>
-<center style="margin-top: 2rem;"><p style="color: #2a7903;font-size: 14px;font-weight: 500;">本站使用Netlify CDN进行加速。</p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" class="custom-button">COPYRIGHT BY-NC-SA 4.0</a> | <a href="https://ikms.eu.org" class="custom-button">KMS ACTIVATION</a> | <a href="https://docker.everyhub.top" class="custom-button">DOCKER HUB PROXY</a> | <a href="https://git.everyhub.top" class="custom-button">GITHUB PROXY</a> | <a href="https://pixiv.everyhub.top" class="custom-button">PIXIV IMAGES PROXY</a> | <a href="https://github.com/jonssonyan/cf-workers-proxy" class="custom-button">SOURCE CODE</a> | <a href="https://cloudflare.com" class="custom-button">POWERED CLOUDFLARE</a></center>
+          body {
+              font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+              line-height: 1.2;
+              color: #000;
+              margin: 0;
+              padding: 30px;
+          }
+          .container {
+              max-width: 1320px;
+              margin: 0 auto;
+              padding: 20px;
+          }
+          h1 {
+              font-size: 2em;
+              margin-bottom: 0.5em;
+              color: #9d0e06;
+              font-weight: 900;
+          }
+          p {
+              margin-bottom: 1.5em;
+          }
+          pre {
+              background: #2d2d2d;
+              color: #f8f8f2;
+              padding: 30px 20px 20px;
+              border-radius: 5px;
+              overflow-x: auto;
+              position: relative;
+          }
+          pre::before {
+              content: " ";
+              display: block;
+              position: absolute;
+              top: 10px;
+              left: 10px;
+              width: 12px;
+              height: 12px;
+              background: #ff5f56;
+              border-radius: 50%;
+              box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+          }
+          code {
+              font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+              font-size: 0.875em;
+          }
+          .copy-button {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              background: #007aff;
+              color: white;
+              border: none;
+              padding: 5px 10px;
+              border-radius: 5px;
+              cursor: pointer;
+              opacity: 0;
+              transition: opacity 0.3s;
+          }
+          pre:hover .copy-button {
+              opacity: 1;
+          }
+          .custom-button {
+              display: inline-block;
+              padding: 0 5px;
+              color: #919ca7;
+              text-align: center;
+              text-decoration: none;
+              font-size: 14px;
+              font-weight: 900;
+              cursor: pointer;
+          }
+          .custom-button:hover {
+              background-color: #7c858e;
+              color: #ffffff;
+          }        
+</style>
+<div style={{textAlign: 'center', marginTop: '2rem'}}>
+  <p style={{color: '#2a7903', fontSize: '14px', fontWeight: '500'}}>
+    本站使用Netlify CDN进行加速。
+  </p>
+  <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" className="custom-button">COPYRIGHT BY-NC-SA 4.0</a> | 
+  <a href="https://ikms.eu.org" className="custom-button">KMS ACTIVATION</a> | 
+  <a href="https://docker.everyhub.top" className="custom-button">DOCKER HUB PROXY</a> | 
+  <a href="https://git.everyhub.top" className="custom-button">GITHUB PROXY</a> | 
+  <a href="https://pixiv.everyhub.top" className="custom-button">PIXIV IMAGES PROXY</a> | 
+  <a href="https://github.com/jonssonyan/cf-workers-proxy" className="custom-button">SOURCE CODE</a> | 
+  <a href="https://cloudflare.com" className="custom-button">POWERED CLOUDFLARE</a>
+</div>
