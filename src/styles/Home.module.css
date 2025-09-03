@@ -7,7 +7,6 @@
   min-height: 100vh;
   padding: 30px;
   max-width: 1080px;
-  margin: 0 auto;
 }
 
 .description {
@@ -68,7 +67,6 @@
 }
 
 .card p {
-  margin: 0;
   opacity: 0.6;
   font-size: 0.9rem;
   line-height: 1.5;
