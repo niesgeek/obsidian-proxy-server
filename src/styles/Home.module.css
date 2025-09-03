@@ -5,10 +5,9 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
-   margin: 0;
-    padding: 30px;
-    max-width: 1080px;
-    margin: 0 auto;
+  padding: 30px;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 .description {
