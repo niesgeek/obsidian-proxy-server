@@ -8,7 +8,7 @@ export default function Document() {
         <Meta content="width=device-width, initial-scale=1" name="viewport"/>
         <title>Obsidian代理服务</title>
       </Head>
-      <body>
+      <body style={{margin: 'auto 20em'}}>
       <Main/>
       <NextScript/>
       </body>
